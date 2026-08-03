@@ -108,7 +108,7 @@ class CliTests(unittest.TestCase):
 
     def test_json_report(self):
         import json as _json
-        code, out, _ = _run(["-", "--json"], stdin_text="Hello World\nhello-world\n")
+        code, out, _ = _run(["-", "--json"], stdin_text="Hello World\nfixed-slug\n")
         self.assertEqual(code, 0)
         report = _json.loads(out)
         self.assertEqual(report["total"], 2)
