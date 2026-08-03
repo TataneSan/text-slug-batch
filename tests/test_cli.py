@@ -115,7 +115,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(report["changed"], 1)
         slugs = [m["slug"] for m in report["mappings"]]
         self.assertIn("hello-world", slugs)
-        self.assertIn("slug-ok", slugs)
+        self.assertIn("fixed-slug", slugs)
 
     def test_json_duplicate_count(self):
         import json as _json
